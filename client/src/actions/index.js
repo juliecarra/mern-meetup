@@ -125,7 +125,7 @@ export const signup = (userData, history) => async (dispatch) => {
 export const login = (userData) => async (dispatch) => {
   try {
     const res = await axios.post("/api/users/login", userData);
-    localStorage.setItem("user", JSON.stringify(res.data));
+
     dispatch({ type: SET_CURRENT_USER, payload: res.data });
   } catch (error) {
     console.log(error);
