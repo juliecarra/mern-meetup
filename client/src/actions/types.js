@@ -1,0 +1,9 @@
+export const FETCH_CATEGORIES = "FETCH_CATEGORIES";
+export const FETCH_MEETUPS = "FETCH_MEETUPS";
+export const FETCH_MEETUP = "FETCH_MEETUP";
+export const FETCH_THREADS = "FETCH_THREADS";
+export const FETCH_THREAD = "FETCH_THREAD";
+export const FETCH_POSTS = "FETCH_POSTS";
+export const FETCH_STATS = "FETCH_STATS";
+export const FETCH_IP = "FETCH_IP";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
