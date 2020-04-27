@@ -32,7 +32,10 @@
     "react-toastify": "^5.5.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "autoprefixer": "^9.7.5",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
   },
   "scripts": {
     "start": "npm-run-all -p watch:css start-js",
