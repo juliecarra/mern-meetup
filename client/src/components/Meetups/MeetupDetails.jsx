@@ -304,7 +304,7 @@ class MeetupDetails extends Component {
                   )}
                   {!isAuthenticated || !this.isMember() || this.isOwner() || (
                     <ThreadCreateModal
-                      btnTitle={`Welcome ${user.username}, Start a new thread`}
+                      btnTitle={`Welcome ${user.username}, start a new thread`}
                       name="Create Thread"
                     />
                   )}

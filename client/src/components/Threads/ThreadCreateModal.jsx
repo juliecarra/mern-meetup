@@ -93,7 +93,7 @@ class ThreadCreateModal extends Component {
                       value={title}
                       name="title"
                       class="textarea"
-                      placeholder="Just write something that interest you (:"
+                      placeholder="Just write something that you are interested in"
                       rows="10"
                       onChange={this.handleChange}
                     ></textarea>
@@ -101,11 +101,27 @@ class ThreadCreateModal extends Component {
                 </form>
               </section>
               <footer class="modal-card-foot">
-                <button class="button is-success" onClick={this.createThread}>
+                <button
+                  class="button is-success"
+                  style={{
+                    backgroundColor: "#00a2c7",
+                    color: "#fff",
+                    fontWeight: "500",
+                  }}
+                  onClick={this.createThread}
+                >
                   Save changes
                 </button>
 
-                <button class="button" onClick={this.closeModal}>
+                <button
+                  style={{
+                    backgroundColor: "#ff1154",
+                    color: "#fff",
+                    fontWeight: "500",
+                  }}
+                  class="button"
+                  onClick={this.closeModal}
+                >
                   Cancel
                 </button>
               </footer>

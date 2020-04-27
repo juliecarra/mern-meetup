@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { fetchStats, login } from "../actions/";
+import { fetchStats } from "../actions/";
 import UserUpdateModal from "../components/User/UserUpdateModal";
 
 class Profile extends Component {
@@ -52,7 +52,9 @@ class Profile extends Component {
               <div class="column is-4-tablet is-10-mobile name">
                 <div>
                   {user && (
-                    <span class="title is-bold">{user && user.name}</span>
+                    <span class="title is-bold" style={{ color: "#212121" }}>
+                      {user && user.name}
+                    </span>
                   )}
                   <br />
 
@@ -232,4 +234,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchStats, login })(Profile);
+export default connect(mapStateToProps, { fetchStats })(Profile);
