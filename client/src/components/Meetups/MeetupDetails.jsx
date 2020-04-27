@@ -266,11 +266,13 @@ class MeetupDetails extends Component {
                 </aside>
               </div>
               <div className="column is-7 is-offset-1">
-                <img
-                  src={meetup.image}
-                  alt=""
-                  style={{ width: "600px", height: "333.33px" }}
-                />
+                {meetup.image && (
+                  <img
+                    src={meetup.image}
+                    alt=""
+                    style={{ width: "600px", height: "333.33px" }}
+                  />
+                )}
                 <br />
                 <div className="content is-medium">
                   <h3

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import * as moment from "moment";
 import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
@@ -28,6 +29,7 @@ class MeetupCreateWizard extends Component {
       description: "",
       timeTo: "",
       timeFrom: "",
+      redirect: false,
     };
     this.moveToNextStep = this.moveToNextStep.bind(this);
     this.moveToPreviousStep = this.moveToPreviousStep.bind(this);
@@ -117,6 +119,7 @@ class MeetupCreateWizard extends Component {
           .trim(),
       };
       await this.props.createMeetup(meetupData, this.props.history);
+      this.setState({ redirect: true });
     } catch (error) {
       console.log(error);
     }
@@ -132,8 +135,12 @@ class MeetupCreateWizard extends Component {
   };
 
   render() {
-    const { currentStep, totalSteps } = this.state;
+    const { currentStep, totalSteps, redirect } = this.state;
     const { categories } = this.props;
+
+    if (redirect) {
+      return <Redirect to="/" />;
+    }
 
     return (
       <div class="meetup-create-form">

@@ -83,10 +83,7 @@ class UserUpdateModal extends Component {
         </button>
         {isOpen && (
           <div class="['modal']">
-            <div
-              class="modal-background"
-              style={{ width: "1366px", marginLeft: "-107px" }}
-            ></div>
+            <div class="modal-background"></div>
             <div class="modal-card">
               <header class="modal-card-head">
                 <p class="modal-card-title" style={{ color: "#212121" }}>
