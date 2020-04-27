@@ -54,7 +54,7 @@ export const createMeetup = (meetup, history) => async (dispatch) => {
 
     dispatch({ payload: res.data });
   } catch (error) {
-    console.log(error.response.data);
+    console.log(error);
   }
 };
 
