@@ -51,7 +51,9 @@ class Profile extends Component {
               </div>
               <div class="column is-4-tablet is-10-mobile name">
                 <div>
-                  <span class="title is-bold">{user && user.username}</span>
+                  {this.props.auth.isAuthenticated && (
+                    <span class="title is-bold">{user.name}</span>
+                  )}
                   <br />
 
                   <br />
