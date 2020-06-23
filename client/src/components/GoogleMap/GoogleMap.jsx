@@ -23,9 +23,7 @@ function MapComponent(props) {
         <InfoWindow position={coordinates} options={{ maxWidth: 300 }}>
           <div>
             Oups, there is problem to find location on the map, we are trying to
-            resolve problem as fast as possible. Contact host for additional
-            informations if you are still interested in booking this place. We
-            are sorry for inconveniences.
+            resolve problem as fast as possible.
           </div>
         </InfoWindow>
       )}
@@ -49,7 +47,7 @@ function withGeocode(WrappedComponent) {
       };
     }
 
-    componentDidMount() {
+    componentWillMount() {
       this.getGeocodeLocation();
     }
 
@@ -88,6 +86,7 @@ function withGeocode(WrappedComponent) {
       if (this.cacher.isValueCached(location)) {
         this.updateCoordinates(this.cacher.getCachedValue(location));
       }
+
       //else geocode location
       else {
         this.geocodeLocation(location).then(

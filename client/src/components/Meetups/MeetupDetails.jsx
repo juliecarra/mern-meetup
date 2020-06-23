@@ -6,6 +6,7 @@ import ThreadCreateModal from "../Threads/ThreadCreateModal";
 
 import * as moment from "moment";
 import { MapWithAMarker } from "../GoogleMap/GoogleMap";
+
 import {
   fetchMeetup,
   fetchThreads,
@@ -176,6 +177,7 @@ class MeetupDetails extends Component {
             </div>
           </div>
         </section>
+
         <section className="section" style={{ backgroundColor: "#f6f7f8" }}>
           <div className="container">
             <div className="columns">
@@ -189,6 +191,9 @@ class MeetupDetails extends Component {
                   }}
                 >
                   <div className="meetup-side-box">
+                    <div className="meetup-side-box-date m-b-sm">
+                      <img src={meetup.image} alt="" />
+                    </div>
                     <div className="meetup-side-box-date m-b-sm">
                       <p style={{ fontWeight: 400, marginLeft: "10px" }}>
                         <i class="far fa-calendar-alt"></i>{" "}
@@ -228,13 +233,13 @@ class MeetupDetails extends Component {
                     </div>
                   </div>
                   <div className="meetup-side-box-map">
-                    <MapWithAMarker
+                    {/* <MapWithAMarker
                       googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCUedWvtn21AhooPEll1tYtm6F3LZzufYc&libraries=geometry,drawing,places`}
                       loadingElement={<div style={{ height: `100%` }} />}
                       containerElement={<div style={{ height: `360px` }} />}
                       mapElement={<div style={{ height: `100%` }} />}
                       location={meetup.location}
-                    />
+                    /> */}
                   </div>
 
                   <p className="menu-label">Threads</p>
@@ -248,11 +253,7 @@ class MeetupDetails extends Component {
                   <div className="columns is-multiline is-mobile">
                     {meetup.joinedPeople &&
                       meetup.joinedPeople.map((person) => (
-                        <div
-                          className="column is-3"
-                          v-for="person in meetup.joined"
-                          key={person._id}
-                        >
+                        <div className="column is-3" key={person._id}>
                           <figure className="image is-64x64">
                             <img
                               className="is-rounded"
@@ -266,14 +267,14 @@ class MeetupDetails extends Component {
                 </aside>
               </div>
               <div className="column is-7 is-offset-1">
-                {meetup.image && (
+                {/* {meetup.image && (
                   <img
                     src={meetup.image}
                     alt=""
                     style={{ width: "600px", height: "333.33px" }}
                   />
                 )}
-                <br />
+                <br /> */}
                 <div className="content is-medium">
                   <h3
                     className="title is-3"
