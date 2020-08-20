@@ -13,7 +13,7 @@
   "author": "julie carra",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.8",
+    "bcrypt": "^5.0.0",
     "concurrently": "^5.1.0",
     "connect-mongodb-session": "^2.3.1",
     "cors": "^2.8.5",
